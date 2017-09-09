@@ -11,49 +11,126 @@
   <title>What We May Become</title>
   <link href="css/foundation.css" rel="stylesheet" type="text/css" />
   <link href="css/twentytwenty.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="main.css">
 </head>
+
+
+<style>
+
+#home
+{
+  background-image: url("https://ih0.redbubble.net/image.208539322.1699/flat,800x800,075,f.jpg");
+}
+
+section
+{
+
+}
+img{
+
+  z-index: 1;
+}
+.twentytwenty-container
+{
+  z-index: 0;
+}
+
+p
+{
+  text-align: left;
+  text-indent: 50px;
+  font-size: 1.3em;
+}
+
+#home
+{
+
+color: #2274A5;
+
+}
+
+</style>
+
   <body>
 
-    <div class="row" style="margin-top: 2em;">
-      <div class="large-4 columns">
-        <h1>Change</h1>
-        <p>Shakespeare is so good at creating realistic character change.</p>
-        <p> This site is an attempt to vizualize some transformations his characters go through. </p>
-      </div>
-      <div title = "make randall proud" class="large-10 columns">
-        <div class="twentytwenty-container">
-          <img src="img/firstLear.png" />
-          <img src="img/secondLear.png" />
+
+    <header id="main-header" class="side-menu">
+      <nav>
+        <ul>
+          <li class="active"><a href="#home"><span>Home</span></a></li>
+          <li><a href="#section-1"><span>King Lear</span></a></li>
+          <li><a href="#section-2"><span>Much Ado About Nothing</span></a></li>
+    <!--      <li><a href="#section-3"><span>Macbeth</span></a></li> -->
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <div class="inner">
+          <h1> <strong> What We May Become </strong> </h1>
+          <h3> Change in Shakespeare </h3>
+
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- Much Ado About Nothing -->
+      <section id="section-1">
 
-    <div class="row" style="margin-top: 2em;">
-      <div class="large-4 columns">
+              <div class="twentytwenty-container">
+                <img src="img/firstLear.png" />
+                <img src="img/secondLear.png" />
+              </div>
+              <br>
+              <h1> King Lear </h1>
+              <div class="row">
+                <div class="col-sm-4">
+<p>
+The character of Lear itself is very finely conceived for the purpose. It is the only ground on which such a story could be built with the greatest truth and effect. It is his rash haste, his violent impetuosity, his blindness to every thing but the dictates of his passions or affections, that produces all his misfortunes, that aggravates his impatience of them, that enforces our pity for him...The greatness of Lear is not in corporal dimension, but in intellectual; the explosions of his passions are terrible as a volcano: they are storms turning up and disclosing to the bottom that rich sea, his mind, with all its vast riches. It is his mind which is laid bare. (Characters of Shakespeare's Plays, 1817)
+</p>
+</div>
+</div>
+      <!--  </div> -->
+      </section>
 
-      </div>
-      <div  class="large-10 columns">
+      <section id="section-2">
+
         <div class="twentytwenty-container">
+
           <img src="img/firstMuchAdo.png" />
           <img src="img/secondMuchAdo.png" />
-        </div>
-      </div>
-    </div>
 
-    <div class="row" style="margin-top: 2em; margin-bottom: 2em;">
-      <div class="large-4 columns">
-        <h3>Vertical Orientation</h3>
-        <p>Demonstrates sliding up and down.</p>
-      </div>
-      <div class="large-8 columns">
-        <div class="twentytwenty-container" data-orientation="vertical">
-          <img  title = "make randall proud" src="img/DanielOlivieri.jpg" />
-          <img title = "by ripping him off" src="img/WKCO.jpg" />
         </div>
-      </div>
-    </div>
+        <br>
+         <h1> Much Ado About Nothing </h1>
+        <div class="row">
+          <div class="col-sm-4">
+
+        <p>
+Why is Benedick, who takes Beatrice's seemingly more bitter taunts in good part, roused to such wrath at this? The blow to his mere vanity as a wit does not seem to explain sufficiently the effect on him, nor does the view that the sparring of the two here simply brings to a climax the rising anger of Benedick. Such an interpretation is not true to the spirit of the play or to the emphasis laid on the passage in the development of Shakespeare's plot. For it is immediately after this — after Benedick in recounting the quarrel to Don Pedro has declared that he would not marry Beatrice "though she were endowed with all that Adam had left him before he transgressed" — that Don Pedro proposes what is characterized as "one of Hercules' labours," to make the two antagonists fall in love with each other.
+
+</p>
+</div>
+
+</div>
+
+
+      </section>
+
+
+    </main>
+
+    <ul id="demos-nav">
+      <li><a href="fixed-header.html">Meep</a></li>
+      <li><a href="sidemenu.html">Meep</a></li>
+      <li><a href="lavalamp.html">Meep</a></li>
+    </ul>
+
+    <script src="menuspy.js"></script>
+    <script>
+      var elm = document.querySelector('#main-header');
+      var ms = new MenuSpy(elm);
+    </script>
+
 
 
     <script
@@ -64,7 +141,7 @@
     <script src="js/jquery.twentytwenty.js"></script>
     <script>
     $(function(){
-      $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
+      $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.5});
       $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
     });
     </script>
